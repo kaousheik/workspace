@@ -1,3 +1,9 @@
+import { User } from "@prisma/client";
+
+export interface GraphQLContext {
+  user: User | null;
+}
+
 export enum BoardType {
   PRIVATE = "PRIVATE",
   PUBLIC = "PUBLIC",

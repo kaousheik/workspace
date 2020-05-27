@@ -1,8 +1,8 @@
 import { Resolver, Query } from "type-graphql";
 import { Board } from "../../models/Board";
-import { prisma } from "prisma";
+import { prisma } from "../../prisma";
 
-@Resolver()
+@Resolver(Board)
 export class GetBoards {
   @Query(() => [Board])
   async getBoards() {
